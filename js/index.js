@@ -1,47 +1,21 @@
-alert('benvenuti su Treni Boolean');
+'use strict'
 
-//prompt richiesta di kilometri  "distanza"
+//mettere i prompt agli imput
 
-const distanza = parseInt(prompt ("Quanti kilometri vuoi percorrere? "));
-console.log(distanza)
+// let element = document.getElementById("nome");
 
-//prompt richiesta anni 
-const anni = parseInt(prompt("Quanti anni hai? "));
-console.log(anni)
+// let element2 = document.getElementById("kilometri");
 
+// let element3 = document.getElementById("eta");
 
 
+// element = prompt("nome");
+// console.log("nome")
 
-//il prezzo del biglietto è definito in base ai km (0.21 € al km)
 
-const costo = '0.21'
-
-//Se l'eta e maggiore di 18 e inferiore di 65 
-   //mostra il prezzo originale
-
-let prezzo = `${distanza} * ${costo} = ${distanza * costo}`
-console.log(prezzo);
-
-document.querySelector('div').innerHTML = `prezzo ${(distanza * costo).toFixed(2)}`;
-
-//sconto per minori e senior
-
-const scontoMinore = '0.2'
-const scontoSenior = '0.4'
-
-//Se l'eta inserita e' minore di 18
-  //calcola prezzoScontato = prezzo - (prezzo / 100 * 20)
-
-if(anni < 18){
-    let prezzoScontato = `${distanza} * ${costo} * ${scontoMinore} = ${distanza * costo * scontoMinore}`;
-    console.log(prezzoScontato)
-
-    document.querySelector('div').innerHTML = `prezzo ${(distanza * costo * scontoMinore).toFixed(2)}`;
-}//Se l'eta inserita e' maggiore/uguale di 65
-  //calcola prezzoScontato = prezzo - (prezzo / 100 * 40)
-   else if(anni >= 65){
-    let prezzoScontato = `${distanza} * ${costo} * ${scontoSenior} = ${distanza * costo * scontoSenior}`;
-    console.log(prezzoScontato)
-
-    document.querySelector('div').innerHTML = `prezzo ${(distanza * costo * scontoSenior).toFixed(2)}`
+function userInput(){
+    var nome = document.getElementById("nome");
+    var kilometri = document.getElementById("kilometri");
+    var eta = document.getElementById("eta");
+    document.getElementById("input1").innerHTML = nome + "" + kilometri + "" + eta;
 }

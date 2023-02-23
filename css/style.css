@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(111, 40, 76);
+}
+
+#calcolatore{
+    margin: 0 auto;
+}
+#calcolatore h1{
+    text-align: center;
+    color: white;
+}
+.containor{
+    background-color: aliceblue;
+    padding: 1.25rem;
+    margin-top: 0 auto;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.containor ul{
+    list-style: none;
+    justify-content: center;
+    gap: 25px;
+}
