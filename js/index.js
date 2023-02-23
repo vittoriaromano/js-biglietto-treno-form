@@ -1,25 +1,34 @@
-'use strict'
-
-//mettere i prompt agli imput
-
-// let element = document.getElementById("nome");
-
-// let element2 = document.getElementById("kilometri");
-
-// let element3 = document.getElementById("eta");
+//definizioni variabili
+const inputName = document.getElementById('name');
+const inputKm = document.getElementById('km');
+const inputAge = document.getElementById('age');
+const buttonGenerate = document.getElementById('genera');
 
 
-// element = prompt("nome");
-// console.log("nome")
+//funzione del bottone
+buttonGenerate.addEventListener('click',
+function(){
 
-let button = document.getElementById('genera')
-const nomeUser = document.getElementById('nomeUser')  
-const name = document.getElementById('name')
+    const inputNameValue = inputName.value;
+    const inputKmValue = Number(inputKm.value);
+    const inputAgeValue = inputAge.value;
 
 
-function showName(inputName){
-    name.innerText = inputName;
+    console.log({inputNameValue, inputKmValue, inputAgeValue});
+
+
+    //prezzo totale senza sconti
+    let ticketPrice = 0.21 * inputKmValue;
+
+    if(inputAgeValue === 'minorenne'){
+        ticketPrice = ticketPrice * 0.8;//20% sconto
+    } else if (inputAgeValue === 'senior'){
+        ticketPrice = ticketPrice * 0.6;//40% sconto
+    }
+
+
+    console.log(ticketPrice.toFixed(2));
+
 }
-button.addEventListener('click',() => {
-    showName(nomeUser.value)
-})
+)
+
