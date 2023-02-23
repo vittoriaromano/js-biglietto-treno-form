@@ -12,10 +12,14 @@
 // element = prompt("nome");
 // console.log("nome")
 
+let button = document.getElementById('genera')
+const nomeUser = document.getElementById('nomeUser')  
+const name = document.getElementById('name')
 
-function userInput(){
-    var nome = document.getElementById("nome");
-    var kilometri = document.getElementById("kilometri");
-    var eta = document.getElementById("eta");
-    document.getElementById("input1").innerHTML = nome + "" + kilometri + "" + eta;
+
+function showName(inputName){
+    name.innerText = inputName;
 }
+button.addEventListener('click',() => {
+    showName(nomeUser.value)
+})
